@@ -1,0 +1,57 @@
+*{
+    max-height: 100%;
+    max-width: 100%;
+    margin:0px;
+}
+body{
+    background-color: aliceblue;
+}
+.header-wrapper{
+    background:transparent;
+    color:black;
+    display:flex; 
+    text-align: center;
+    width:100%;
+    position:fixed;
+    header {
+  /* 1. Stick it to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* 2. Apple's exact semi-transparent white (for light mode) */
+  background-color: rgba(255, 255, 255, 0.72);
+
+  /* 3. The magic: Blurs what is BEHIND the header */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%); /* Safari support */
+}
+}
+.items-wrapper{
+    width: 980px;      
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.header-wrapper ul{
+     display: flex;
+    -webkit-box-pack: justify;    /*to distribute the list items evenly across the header and create space between them*/
+    justify-content: space-between;
+
+}
+.items-wrapper ul{
+    list-style: none;
+}
+
+.header-wrapper .items-wrapper{
+    display: inline-block;   
+    padding: 10px 0 14px;
+    height: 25px;
+    opacity: 0.8;
+    gap:20px;
+}
+.items-wrapper ul li a{
+    text-decoration: none;
+    color:black;
+}
+
