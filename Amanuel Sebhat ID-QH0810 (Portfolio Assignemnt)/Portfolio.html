@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header2">
+            <div class="header-wrapper2">
+                <ul>
+                    <li class="logo">Developer</li>
+                    <li><a href="Portfolio.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+    <div class="hero" id="about">
+
+    <div class="hero-content">
+
+        <div class="hero-left">
+
+            <div class="hero-text">
+                Hi, I'm Amanuel
+                <p>Sebhat</p>
+            </div>
+
+            <div class="hero-medium-text">
+                Front-End Web Developer
+            </div>
+
+            <div class="hero-small-text">
+                I build modern, responsive, and user-friendly websites
+                using HTML, CSS, JavaScript, Bootstrap, Java, and SQL.
+                Passionate about creating beautiful digital experiences
+                and continuously improving my development skills.
+            </div>
+
+            <div class="buttons">
+                <a href="About.html" class="btn">Learn more</a>
+               <a href="Contact.html" class="btn2">Contact me</a>
+            </div>
+
+        </div>
+
+        <div class="banner">
+            <img src="banner.jpg" alt="Developer">
+        </div>
+
+    </div>
+
+</div>
+
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill-wrapper">
+                <div class="card">
+                    <p>Html & CSS</p>
+                </div>
+
+                        <div class="card">
+                    <p>Bootstrap </p>
+                </div>
+
+                        <div class="card">
+                    <p>Responsive design </p>
+                </div>
+
+                        <div class="card">
+                    <p>JavaScript </p>
+                </div>
+
+
+                        <div class="card">
+                    <p>Git hub </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="slider">
+
+        <button class="prev">&#10094;</button>
+
+        <div class="slides">
+
+            <div class="slide active">
+                <img src="Slider images/apple2.jpg" alt="Project 1">
+
+                <div class="project-info">
+                    <h3>Apple Website</h3>
+                    <p>Responsive Apple built using HTML, CSS.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Slider images/puppy.jpg" alt="Project 2">
+
+                <div class="project-info">
+                    <h3>Puppy lovers Website</h3>
+                    <p>Modern Web page with responsive layout.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Slider images/event2.jpg" alt="Project 3">
+
+                <div class="project-info">
+                    <h3>Event management website</h3>
+                    <p>We will provide service with any Event!.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="Slider images/portfolio2.jpg" alt="Project 4">
+
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>To show case my abilities and creations.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="next">&#10095;</button>
+
+    </div>
+
+    <div class="dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</section>
+
+
+
+
+        <footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>Developer.</h2>
+
+        <p>
+            Building responsive and user-friendly websites with clean code and modern design.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="Portfolio.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Amanuel. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    </body>
+</html>
+
+
+
+<script>
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+let current = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+}
+
+next.addEventListener("click", ()=>{
+
+    current++;
+
+    if(current >= slides.length){
+
+        current = 0;
+
+    }
+
+    showSlide(current);
+
+});
+
+prev.addEventListener("click", ()=>{
+
+    current--;
+
+    if(current < 0){
+
+        current = slides.length - 1;
+
+    }
+
+    showSlide(current);
+
+});
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        current = index;
+
+        showSlide(current);
+
+    });
+
+});
+setInterval(() => {
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
+}, 4000);
+
+
+</script>

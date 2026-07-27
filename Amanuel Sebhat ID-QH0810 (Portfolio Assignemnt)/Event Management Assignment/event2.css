@@ -1,0 +1,142 @@
+.hero{
+    min-height: 90vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("banner.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.service-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.card{
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+.birthday img{
+    height:275px;
+}
+.holiday img{
+    height:275px;
+}
+
+
+
+*{
+    margin:0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background-color:antiquewhite;
+    color:black;
+    display:flex;
+    height:40px;
+    padding-top:15px;
+    font-size:20px;
+}
+.header-wrapper .logo {
+    list-style:none;
+    text-decoration:none;
+    padding-right:900px;
+    font-weight:600;
+    font-size:25px;
+    font-family:cursive;
+}
+.header-wrapper ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+.header-wrapper ul li a{
+    text-decoration:none;
+    color:black;
+}
+.header ul li a:hover{
+    opacity:0.25;
+    color:black;
+}
+
+.footer{
+
+    background:antiquewhite;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.footer-content{
+
+    max-width:800px;
+    margin:auto;
+
+}
+
+.footer h2{
+
+    color:black;
+    font-size:28px;
+    margin-bottom:15px;
+    font-weight:600;
+
+}
+
+.footer p{
+
+    color:#82a4cd;
+    line-height:1.8;
+    margin-bottom:20px;
+
+}
+
+.footer-links{
+
+    margin:30px 0;
+
+}
+
+.footer-links a{
+
+    color:rgb(111, 88, 88);
+    text-decoration:none;
+    margin:0 18px;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#2563eb;
+
+}
+
+.footer hr{
+
+    border:none;
+    height:1px;
+    background:#334155;
+    margin:30px 0;
+
+}
+
+.copyright{
+    color:#94a3b8;
+    font-size:14px;
+
+}
+
